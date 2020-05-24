@@ -12,8 +12,8 @@
 
 	<properties>
 		<aws.secretsmanager.version>1.11.779</aws.secretsmanager.version>
-		<slf4j.version>1.7.30</slf4j.version>
-		<log4j.version>2.13.3</log4j.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<log4j.version>2.12.1</log4j.version>
 		<junit.version>4.8.1</junit.version>
 	</properties>
 
@@ -36,7 +36,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- jcl-over-slf4j -->
@@ -44,7 +43,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${slf4j.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- Binding for Log4J -->
