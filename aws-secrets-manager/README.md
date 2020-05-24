@@ -1,0 +1,3 @@
+# Secrets Manager
+
+Simple wrapper class to be used as Talend Routine allows dependencies to be centrally managed.  Dependency Management is done both here for testing the wrapper class, but also in the Talend Routine to encapsulate dependencies from Jobs that use the Routine.  The AWS Secrets Manager API is simple enough to require little composition of AWS SDK invocations, but if necessary it can be encapsulated in the wrapper.
