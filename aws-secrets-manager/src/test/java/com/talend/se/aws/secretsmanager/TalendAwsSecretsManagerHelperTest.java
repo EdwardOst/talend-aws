@@ -15,13 +15,13 @@ public class TalendAwsSecretsManagerHelperTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		logger.info("TalendAwsSecretsManagerHelperTest.setup");
+		logger.debug("TalendAwsSecretsManagerHelperTest.setup");
 		helper = new TalendAwsSecretsManagerHelper(REGION);
 	}
 
 	@Test
 	public void testGet() {
-		logger.info("TalendAwsSecretsManagerHelperTest.testGet");
+		logger.debug("TalendAwsSecretsManagerHelperTest.testGet");
 		final String EXPECTED = "not_my_real_password";
 		
 		String secretName = "not_my_real_password";

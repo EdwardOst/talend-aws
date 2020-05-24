@@ -14,7 +14,9 @@
 		<aws.secretsmanager.version>1.11.779</aws.secretsmanager.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<log4j.version>2.12.1</log4j.version>
+		<jackson.version>2.10.1</jackson.version>
 		<junit.version>4.8.1</junit.version>
+		<joda-time.version>2.9.9</joda-time.version>
 	</properties>
 
 	<dependencies>
@@ -29,6 +31,26 @@
 					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<!-- jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-cbor</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<!--  joda-time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
 		</dependency>
 
 		<!-- slf4j -->
@@ -68,6 +90,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
