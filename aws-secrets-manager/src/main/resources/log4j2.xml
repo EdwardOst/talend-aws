@@ -6,7 +6,7 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Logger name="com.learnlog" level="debug" additivity="false">
+        <Logger name="com.talend.se.aws.secretsmanager" level="warn" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
         <Root level="error">

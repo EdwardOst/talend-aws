@@ -2,6 +2,8 @@
 
 Helper classes for using AWS Services with Talend.
 
+## Design
+
 The helper classes can in turn be used by Talend Routines.  This allows dependencies to be centrally managed.  Dependency management is done here in the maven project for testing the helper class, and also in the Talend Routine to encapsulate dependencies from Jobs that use the Routine.  
 
 Many AWS API are simple enough to require little composition of AWS SDK invocations, but if necessary it can be encapsulated in the helper.
@@ -9,6 +11,15 @@ Many AWS API are simple enough to require little composition of AWS SDK invocati
 Talend Routines should be simple wrappers.  The strategy is to keep the Talend Routine as simple as possible so that use of Talend Studio is minimized and focused on composition of Jobs rather than low level depenency management.
 
 The Eclipse environment is much better suited for the detailed dependency management, and the build / test / iterate cycle will be much faster in Eclipse.
+
+## Talend Job Libraries
+
+Talend jobs include some libraries by default.  These libraries do not need to be referenced by the helper Routines `Edit Routine Dependencies`.  These libraries include
+
+- slf4j-api
+- log4j-slf4j-impl
+- log4j-api
+- log4j-core
 
 ## Dependency Scope and Exclusions
 

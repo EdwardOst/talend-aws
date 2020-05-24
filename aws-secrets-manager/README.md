@@ -5,7 +5,7 @@ Simple helper class to be used by Talend Routines using the AWS Secrets Manager 
 
 ## Dependencies
 
-All compile dependencies need to be referenced by the helper Routine in Studio via `Edit Routine Dependencies`.  Test scope dependencies do not need to be added.
+All compile scope dependencies except for those prefixed with a hyphen (-) need to be referenced by the helper Routine in Studio via `Edit Routine Dependencies`.  Dependencies prefixed with a hyphen are automatically included in all Talend jobs.  Test scope dependencies do not need to be added.
 
 Bolded libraries will need to be added to Studio library modules in order to be able to be referenced.
 
@@ -13,11 +13,11 @@ Italicized libraries must have their versions specified in the helper pom so tha
 
 | Library                         |Studio Version  | AWS Version | Helper Version    | Helper Scope |
 |:-------------------------------:|:--------------:|:-----------:|:-----------------:|:------------:|
-| slf4j-api                       |  1.7.25        |  N/A        | 1.7.25            | compile      |
+| -slf4j-api                      |  1.7.25        |  N/A        | 1.7.25            | compile      |
+| -log4j-slf4j-impl               |  2.12.1        |  N/A        | 1.7.25            | compile      |
+| -log4j-api                      |  2.12.1        |  N/A        | 2.12.1            | test         |
+| -log4j-core                     |  2.12.1        |  N/A        | 2.12.1            | test         |
 | jcl-over-slf4j                  |  1.7.25        |  N/A        | 1.7.25            | compile      |
-| log4j-slf4j-impl                |  2.12.1        |  N/A        | 1.7.25            | compile      |
-| log4j-api                       |  2.12.1        |  N/A        | 2.12.1            | test         |
-| log4j-core                      |  2.12.1        |  N/A        | 2.12.1            | test         |
 | **aws-java-sdk-secretsmanager** |  N/A           | 1.11.779    | 1.11.779          | compile      |
 | **aws-java-sdk-core**           |  1.11.269      | 1.11.779    | 1.11.779          | compile      |
 | **httpclient**                  |  4.5.6         | 4.5.9       | 4.5.9             | compile      |
